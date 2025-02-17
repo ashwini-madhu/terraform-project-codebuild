@@ -87,7 +87,7 @@ resource "aws_instance" "ec2_instance" {
   subnet_id              = aws_default_subnet.default_az1.id
   vpc_security_group_ids = [aws_security_group.ec2_security_group.id]
   key_name               = "new-key-pair"
-  user_data              = file("install.sh")
+  user_data              = file("install-techmax.sh")
 
   tags = {
     Name = "techmax server"
